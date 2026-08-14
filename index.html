@@ -179,16 +179,6 @@ section{
   gap:25px;
 }
 
-@media(max-width:700px){
-  .strategy-grid{
-    grid-template-columns:1fr;
-  }
-
-  nav{
-    display:none;
-  }
-}
-
 .strategy{
   background:#10171f;
   border-radius:15px;
@@ -324,28 +314,93 @@ footer{
   color:#66727d;
   font-size:13px;
 }
+
+/* PRICING */
+
+.pricing-card{
+  text-align:center;
+  position:relative;
+}
+
+.pricing-card h2{
+  color:#00e58a;
+  font-size:32px;
+  margin:15px 0;
+}
+
+.pricing-card h2 small{
+  color:#98a5b1;
+  font-size:14px;
+  font-weight:normal;
+}
+
+.pricing-card p{
+  margin:7px 0;
+}
+
+.popular-plan{
+  border:2px solid #00e58a;
+  box-shadow:0 0 25px rgba(0,229,138,.12);
+}
+
+.popular-badge{
+  display:inline-block;
+  background:#00e58a;
+  color:#03120b;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.vip-plan{
+  border-color:#9b6cff;
+}
+
+.vip-plan h3{
+  color:#c09aff;
+}
+
+@media(max-width:700px){
+  .strategy-grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .results{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
+
   <div class="logo">AS Trademaster Academy</div>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#courses">Courses</a>
+    <a href="#pricing">Pricing</a>
     <a href="#strategy">Strategy</a>
     <a href="#investment">Calculator</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
 
 <!-- HERO -->
 
 <section class="hero" id="home">
+
   <div class="hero-content">
 
     <div class="badge">TRADING EDUCATION & MARKET KNOWLEDGE</div>
@@ -366,6 +421,7 @@ footer{
     </div>
 
   </div>
+
 </section>
 
 
@@ -435,6 +491,136 @@ footer{
     </div>
 
   </div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+  <div class="section-title">
+    <h2>Choose Your Plan</h2>
+    <p>Choose the academy plan that fits your trading journey.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card pricing-card">
+
+      <h3>Basic</h3>
+
+      <h2>
+        $49
+        <small>/ Month</small>
+      </h2>
+
+      <p>Perfect for beginners</p>
+
+      <br>
+
+      <p>✓ Trading Fundamentals</p>
+      <p>✓ Basic Market Analysis</p>
+      <p>✓ Entry Concepts</p>
+      <p>✓ Educational Content</p>
+
+      <br>
+
+      <a href="#contact" class="btn">
+        Get Started
+      </a>
+
+    </div>
+
+
+    <div class="card pricing-card">
+
+      <h3>Standard</h3>
+
+      <h2>
+        $99
+        <small>/ Month</small>
+      </h2>
+
+      <p>For serious learners</p>
+
+      <br>
+
+      <p>✓ Everything in Basic</p>
+      <p>✓ Advanced Market Analysis</p>
+      <p>✓ Buy & Sell Confirmation</p>
+      <p>✓ Trading Strategy Lessons</p>
+
+      <br>
+
+      <a href="#contact" class="btn">
+        Get Started
+      </a>
+
+    </div>
+
+
+    <div class="card pricing-card popular-plan">
+
+      <div class="popular-badge">
+        ⭐ POPULAR
+      </div>
+
+      <h3>Premium</h3>
+
+      <h2>
+        $149
+        <small>/ Month</small>
+      </h2>
+
+      <p>Best for advanced learners</p>
+
+      <br>
+
+      <p>✓ Everything in Standard</p>
+      <p>✓ Advanced Trading Strategy</p>
+      <p>✓ Premium Video Lessons</p>
+      <p>✓ Market Confirmation System</p>
+      <p>✓ Premium Support</p>
+
+      <br>
+
+      <a href="#contact" class="btn">
+        Get Started
+      </a>
+
+    </div>
+
+
+    <div class="card pricing-card vip-plan">
+
+      <h3>VIP</h3>
+
+      <h2>
+        $199
+        <small>/ Month</small>
+      </h2>
+
+      <p>Complete VIP Experience</p>
+
+      <br>
+
+      <p>✓ Everything in Premium</p>
+      <p>✓ VIP Trading Content</p>
+      <p>✓ Advanced Market Insights</p>
+      <p>✓ VIP Support</p>
+      <p>✓ Exclusive Materials</p>
+
+      <br>
+
+      <a href="#contact" class="btn">
+        Join VIP
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
 
@@ -481,6 +667,7 @@ footer{
     </div>
 
   </div>
+
 </section>
 
 
@@ -527,6 +714,7 @@ footer{
     </div>
 
   </div>
+
 </section>
 
 
@@ -536,28 +724,22 @@ footer{
 
   <div class="section-title">
     <h2>Investment Return Calculator</h2>
-    <p>Illustrative calculation for educational purposes.</p>
+    <p>
+      Select an investment amount and view an illustrative
+      estimated return.
+    </p>
   </div>
 
   <div class="investment">
 
     <div class="calculator">
 
-      
-<section id="investment">
-
-  <div class="section-title">
-    <h2>Investment Return Calculator</h2>
-    <p>Select an investment amount and view an illustrative estimated return.</p>
-  </div>
-
-  <div class="investment">
-
-    <div class="calculator">
-
-      <label for="amount">Investment Amount (USD)</label>
+      <label for="amount">
+        Investment Amount (USD)
+      </label>
 
       <select id="amount" onchange="calculateReturn()">
+
         <option value="1000">$1,000</option>
         <option value="5000">$5,000</option>
         <option value="10000">$10,000</option>
@@ -565,35 +747,81 @@ footer{
         <option value="50000">$50,000</option>
         <option value="75000">$75,000</option>
         <option value="100000">$100,000</option>
+
       </select>
 
-      <label for="period">Return Type</label>
+
+      <label for="period">
+        Return Type
+      </label>
 
       <select id="period" onchange="calculateReturn()">
-        <option value="monthly">Monthly — 3%</option>
-        <option value="yearly">Yearly — 4%</option>
+
+        <option value="monthly">
+          Monthly — 3%
+        </option>
+
+        <option value="yearly">
+          Yearly — 40%
+        </option>
+
       </select>
+
 
       <div class="results">
 
         <div class="result-box">
-          <span>Investment</span>
-          <strong id="investmentAmount">$1,000.00</strong>
+
+          <span>
+            Investment
+          </span>
+
+          <strong id="investmentAmount">
+            $1,000.00
+          </strong>
+
         </div>
+
 
         <div class="result-box">
-          <span>Estimated Return</span>
-          <strong id="profitAmount">$30.00</strong>
+
+          <span>
+            Estimated Return
+          </span>
+
+          <strong id="profitAmount">
+            $30.00
+          </strong>
+
         </div>
 
       </div>
 
+
       <div class="result-box" style="margin-top:15px;">
-        <span>Estimated Total</span>
-        <strong id="totalAmount">$1,030.00</strong>
+
+        <span>
+          Estimated Total
+        </span>
+
+        <strong id="totalAmount">
+          $1,030.00
+        </strong>
+
       </div>
 
-  </div>l
+
+      <div class="warning">
+
+        ⚠️ This calculator is for educational and
+        illustrative purposes only. Actual market returns
+        are not guaranteed and may be higher or lower.
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -609,33 +837,48 @@ footer{
   <div class="cards">
 
     <div class="card">
+
       <div class="icon">🎯</div>
+
       <h3>Confirmation First</h3>
+
       <p>
-        Focus on waiting for a structured setup before considering
-        an entry.
+        Focus on waiting for a structured setup before
+        considering an entry.
       </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">🧠</div>
+
       <h3>Trading Knowledge</h3>
+
       <p>
-        Learn the concepts behind market movements instead of
-        simply following signals.
+        Learn the concepts behind market movements instead
+        of simply following signals.
       </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">🛡️</div>
+
       <h3>Risk Awareness</h3>
+
       <p>
-        Understand that protecting capital and controlling risk
-        are essential parts of trading.
+        Understand that protecting capital and controlling
+        risk are essential parts of trading.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
 
@@ -648,10 +891,13 @@ footer{
   </div>
 
   <p class="about">
-    AS Trademaster Academy is focused on practical trading education,
-    market analysis and disciplined decision-making. Our goal is to
-    help learners understand the financial markets and develop their
-    own trading knowledge.
+
+    AS Trademaster Academy is focused on practical trading
+    education, market analysis and disciplined
+    decision-making. Our goal is to help learners understand
+    the financial markets and develop their own trading
+    knowledge.
+
   </p>
 
 </section>
@@ -662,39 +908,49 @@ footer{
 <section id="contact">
 
   <div class="section-title">
+
     <h2>Contact Us</h2>
-    <p>For academy information and enquiries.</p>
+
+    <p>
+      For academy information and enquiries.
+    </p>
+
   </div>
 
-<div class="contact">
 
-  <div class="contact-number">
-    📞 01341228602
+  <div class="contact">
+
+    <div class="contact-number">
+      📞 01341228602
+    </div>
+
+
+    <a
+      class="btn"
+      href="https://wa.me/8801341228602"
+      target="_blank"
+    >
+      💬 WhatsApp
+    </a>
+
+
+    <a
+      class="btn secondary"
+      href="mailto:astrademasteracademybd22@gmail.com"
+    >
+      📧 Gmail
+    </a>
+
+
+    <a
+      class="btn"
+      href="tel:01341228602"
+    >
+      📞 Call Now
+    </a>
+
   </div>
 
-  <a
-    class="btn"
-    href="https://wa.me/8801341228602"
-    target="_blank"
-  >
-    💬 WhatsApp
-  </a>
-
-  <a
-    class="btn secondary"
-    href="mailto:astrademasteracademybd22@gmail.com"
-  >
-    📧 Gmail
-  </a>
-
-  <a
-    class="btn"
-    href="tel:01341228602"
-  >
-    📞 Call Now
-  </a>
-
-</div>
 </section>
 
 
@@ -702,18 +958,23 @@ footer{
 
 <div class="disclaimer">
 
-  <strong> Disclaimer:</strong><br><br>
+  <strong>Disclaimer:</strong>
+
+  <br><br>
 
   AS Trademaster Academy provides educational content only.
   Nothing on this website should be considered financial,
   investment or trading advice. Trading and investing in
-  financial markets
+  financial markets involves risk and losses are possible.
 
 </div>
 
 
 <footer>
-  © 2026 AS Trademaster Academy. All Rights Reserved.
+
+  © 2026 AS Trademaster Academy.
+  All Rights Reserved.
+
 </footer>
 
 
@@ -730,13 +991,20 @@ function calculateReturn(){
   let rate;
 
   if(period === "monthly"){
+
     rate = 0.03;
+
   }else{
-    rate = 0.04;
+
+    rate = 0.40;
+
   }
 
+
   let profit = amount * rate;
+
   let total = amount + profit;
+
 
   document.getElementById("investmentAmount").innerText =
     "$" + amount.toLocaleString("en-US", {
@@ -744,11 +1012,13 @@ function calculateReturn(){
       maximumFractionDigits:2
     });
 
+
   document.getElementById("profitAmount").innerText =
     "$" + profit.toLocaleString("en-US", {
       minimumFractionDigits:2,
       maximumFractionDigits:2
     });
+
 
   document.getElementById("totalAmount").innerText =
     "$" + total.toLocaleString("en-US", {
@@ -758,9 +1028,11 @@ function calculateReturn(){
 
 }
 
+
 calculateReturn();
 
 </script>
+
 
 </body>
 </html>
