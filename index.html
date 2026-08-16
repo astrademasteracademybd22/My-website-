@@ -522,6 +522,22 @@ font-size:13px
 }
 
 
+/* SEE MORE */
+
+.extra-course{
+display:none
+}
+
+.see-more-wrap{
+text-align:center;
+margin-top:30px
+}
+
+.see-more-wrap .btn{
+min-width:140px
+}
+
+
 /* STUDENT SECTION */
 
 .student-card{
@@ -630,7 +646,6 @@ padding:22px
 </style>
 </head>
 
-
 <body>
 
 
@@ -707,7 +722,7 @@ Enroll Now
 <h2>Our Courses</h2>
 
 <p>
-Choose Online or Offline learning.
+Explore Bangladesh Stock Market, Forex, Gold and trading education.
 </p>
 
 </div>
@@ -716,11 +731,43 @@ Choose Online or Offline learning.
 <div class="cards">
 
 
+<!-- 01 BANGLADESH STOCK -->
+
+<div class="card">
+
+<div class="icon">🇧🇩</div>
+
+<h3>
+Bangladesh Stock Market
+</h3>
+
+<p>
+Learn about DSE, CSE, listed companies, market structure,
+stock market basics and responsible investing.
+</p>
+
+<br>
+
+<a
+href="#bangladesh-stock"
+class="btn">
+
+Learn More
+
+</a>
+
+</div>
+
+
+<!-- 02 ONLINE -->
+
 <div class="card">
 
 <div class="icon">💻</div>
 
-<h3>Online Course</h3>
+<h3>
+Online Course
+</h3>
 
 <p>
 Learn through structured video lessons from beginner
@@ -736,11 +783,15 @@ Enroll Online
 </div>
 
 
+<!-- 03 OFFLINE -->
+
 <div class="card">
 
 <div class="icon">🏫</div>
 
-<h3>Offline Course</h3>
+<h3>
+Offline Course
+</h3>
 
 <p>
 Attend academy classes in person with scheduled lessons
@@ -756,52 +807,104 @@ Enroll Offline
 </div>
 
 
+<!-- 04 FOREX -->
+
 <div class="card">
 
 <div class="icon">📈</div>
 
-<h3>Forex Trading</h3>
+<h3>
+Forex Trading
+</h3>
 
 <p>
-Currency pairs, market structure, trends and essential
-Forex concepts.
+Currency pairs, market structure, trends, technical analysis
+and essential Forex concepts.
 </p>
+
+<br>
+
+<a
+href="https://www.tradingview.com/markets/currencies/"
+target="_blank"
+rel="noopener"
+class="btn stock-btn">
+
+📊 Visit TradingView
+
+</a>
 
 </div>
 
+
+<!-- 05 GOLD -->
 
 <div class="card">
 
 <div class="icon">🥇</div>
 
-<h3>Gold / XAUUSD</h3>
+<h3>
+Gold / XAUUSD
+</h3>
 
 <p>
-Gold market behaviour, important levels and
-confirmation-based concepts.
+Study Gold price movement, important levels,
+market structure and confirmation-based analysis.
 </p>
+
+<br>
+
+<a
+href="https://www.tradingview.com/symbols/XAUUSD/"
+target="_blank"
+rel="noopener"
+class="btn stock-btn">
+
+📊 View XAUUSD Chart
+
+</a>
 
 </div>
 
+
+<!-- 06 TECHNICAL -->
 
 <div class="card">
 
 <div class="icon">📊</div>
 
-<h3>Technical Analysis</h3>
+<h3>
+Technical Analysis
+</h3>
 
 <p>
 Support, resistance, trend, price action and chart analysis.
 </p>
 
+<br>
+
+<a
+href="https://www.tradingview.com/chart/"
+target="_blank"
+rel="noopener"
+class="btn stock-btn">
+
+📊 Open TradingView
+
+</a>
+
 </div>
 
+
+<!-- 07 RISK -->
 
 <div class="card">
 
 <div class="icon">🛡️</div>
 
-<h3>Risk Management</h3>
+<h3>
+Risk Management
+</h3>
 
 <p>
 Stop Loss, position sizing and responsible risk management.
@@ -809,6 +912,139 @@ Stop Loss, position sizing and responsible risk management.
 
 </div>
 
+
+<!-- 08 FUNDAMENTAL -->
+
+<div class="card">
+
+<div class="icon">📉</div>
+
+<h3>
+Fundamental Analysis
+</h3>
+
+<p>
+Understand economic factors, company information
+and market fundamentals.
+</p>
+
+</div>
+
+
+<!-- 09 PSYCHOLOGY -->
+
+<div class="card">
+
+<div class="icon">🧠</div>
+
+<h3>
+Trading Psychology
+</h3>
+
+<p>
+Learn discipline, patience and emotional control in trading.
+</p>
+
+</div>
+
+
+<!-- 10 SKILL -->
+
+<div class="card">
+
+<div class="icon">💼</div>
+
+<h3>
+Skill & Experience
+</h3>
+
+<p>
+Develop practical skills, experience and responsible
+trading habits.
+</p>
+
+</div>
+
+
+<!-- SEE MORE ITEMS -->
+
+
+<div class="card extra-course">
+
+<div class="icon">🎯</div>
+
+<h3>
+Advanced Trading Strategy
+</h3>
+
+<p>
+Advanced concepts for structured market analysis
+and trade planning.
+</p>
+
+</div>
+
+
+<div class="card extra-course">
+
+<div class="icon">📋</div>
+
+<h3>
+Portfolio Management
+</h3>
+
+<p>
+Learn portfolio planning, diversification and
+risk awareness.
+</p>
+
+</div>
+
+
+<div class="card extra-course">
+
+<div class="icon">🔎</div>
+
+<h3>
+Market Analysis
+</h3>
+
+<p>
+Study market structure, key levels and confirmation.
+</p>
+
+</div>
+
+
+<div class="card extra-course">
+
+<div class="icon">💼</div>
+
+<h3>
+Job & Funding Opportunities
+</h3>
+
+<p>
+Opportunities are subject to eligibility, skills,
+experience, performance and applicable conditions.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="see-more-wrap">
+
+<button
+id="courseSeeMoreBtn"
+class="btn"
+onclick="toggleCourses()">
+
+See More
+
+</button>
 
 </div>
 
@@ -1537,13 +1773,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Job</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">02</span>
 <h3>Muzzakir Ahmed</h3>
 <p>Course</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">03</span>
@@ -1551,13 +1785,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Investment</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">04</span>
 <h3>Musarof Islam</h3>
 <p>Job</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">05</span>
@@ -1565,13 +1797,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Job & Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">06</span>
 <h3>Kaykubad</h3>
 <p>Job</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">07</span>
@@ -1579,13 +1809,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">08</span>
 <h3>Parvez Ahmed</h3>
 <p>Investment</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">09</span>
@@ -1593,13 +1821,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">10</span>
 <h3>Oshim</h3>
 <p>Investment</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">11</span>
@@ -1607,13 +1833,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Job</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">12</span>
 <h3>Shakil Ahmed</h3>
 <p>Course</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">13</span>
@@ -1621,13 +1845,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Investment</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">14</span>
 <h3>Rashedul Islam</h3>
 <p>Job</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">15</span>
@@ -1635,13 +1857,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Job & Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">16</span>
 <h3>Imran Hossain</h3>
 <p>Course</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">17</span>
@@ -1649,13 +1869,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Investment</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">18</span>
 <h3>Fahad Karim</h3>
 <p>Job</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">19</span>
@@ -1663,13 +1881,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">20</span>
 <h3>Mahmudul Hasan</h3>
 <p>Investment</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">21</span>
@@ -1677,13 +1893,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Job</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">22</span>
 <h3>Arafat Hossain</h3>
 <p>Course</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">23</span>
@@ -1691,13 +1905,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Investment</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">24</span>
 <h3>Tanvir Ahmed</h3>
 <p>Job & Course</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">25</span>
@@ -1705,13 +1917,11 @@ Students and participants connected with AS Trademaster Academy.
 <p>Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">26</span>
 <h3>Rony Ahmed</h3>
 <p>Investment</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">27</span>
@@ -1719,20 +1929,17 @@ Students and participants connected with AS Trademaster Academy.
 <p>Job</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">28</span>
 <h3>Faisal Ahmed</h3>
 <p>Course</p>
 </div>
 
-
 <div class="card student-card">
 <span class="student-number">29</span>
 <h3>Sumaiya Akter</h3>
 <p>Investment</p>
 </div>
-
 
 <div class="card student-card">
 <span class="student-number">30</span>
@@ -2368,6 +2575,33 @@ and conditions. No job, funding or investment return is guaranteed.
 <script>
 
 
+/* SEE MORE COURSES */
+
+function toggleCourses(){
+
+const extraCourses =
+document.querySelectorAll(".extra-course");
+
+const button =
+document.getElementById("courseSeeMoreBtn");
+
+const isHidden =
+extraCourses[0].style.display === "" ||
+extraCourses[0].style.display === "none";
+
+extraCourses.forEach(function(course){
+
+course.style.display =
+isHidden ? "block" : "none";
+
+});
+
+button.innerText =
+isHidden ? "See Less" : "See More";
+
+}
+
+
 /* COPY PAYMENT NUMBER */
 
 function copyText(text,msg){
@@ -2545,7 +2779,6 @@ whatsappURL,
 /* INITIAL CALCULATION */
 
 calculateReturn();
-
 
 </script>
 
