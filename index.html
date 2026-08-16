@@ -7,2781 +7,448 @@
 <title>AS Trademaster Academy | Trading Education</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#070b10;
-color:#fff;
-line-height:1.6
+    background:#070b10;
+    color:#fff;
+    line-height:1.6;
 }
 
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
 header{
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(10,15,21,.97);
-border-bottom:1px solid #202b36;
-padding:16px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(5,9,14,.96);
+    border-bottom:1px solid #1d2935;
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-font-size:20px;
-font-weight:bold;
-color:#00e58a
+    font-size:21px;
+    font-weight:800;
+    color:#00e5ff;
 }
 
-nav a{
-color:#ddd;
-text-decoration:none;
-margin-left:14px;
-font-size:13px
+.logo span{
+    color:#fff;
 }
 
-nav a:hover{
-color:#00e58a
+.nav-links{
+    display:flex;
+    gap:20px;
+    align-items:center;
 }
 
-section{
-max-width:1100px;
-margin:auto;
-padding:70px 20px
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    transition:.3s;
 }
 
+.nav-links a:hover{
+    color:#00e5ff;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
 .hero{
-min-height:600px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:80px 20px;
-background:radial-gradient(circle at top,#123329 0,#0b1118 38%,#070b10 75%)
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    background:
+    radial-gradient(circle at top,#123344 0,#070b10 45%);
 }
 
 .hero-content{
-max-width:850px
-}
-
-.badge{
-display:inline-block;
-padding:8px 15px;
-border:1px solid #00d084;
-color:#00e58a;
-border-radius:30px;
-margin-bottom:20px;
-font-size:13px
+    width:100%;
 }
 
 .hero h1{
-font-size:clamp(38px,7vw,68px);
-line-height:1.1;
-margin-bottom:20px
+    font-size:clamp(38px,7vw,72px);
+    line-height:1.05;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-color:#00e58a
+    color:#00e5ff;
 }
 
 .hero p{
-color:#b8c3cd;
-max-width:700px;
-margin:auto;
-font-size:18px
-}
-
-.buttons{
-margin-top:30px
+    max-width:750px;
+    margin:0 auto 30px;
+    color:#b9c3cc;
+    font-size:18px;
 }
 
 .btn{
-display:inline-block;
-padding:13px 24px;
-margin:6px;
-background:#00d084;
-color:#03120b;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-border:0;
-cursor:pointer
+    display:inline-block;
+    background:#00e5ff;
+    color:#001015;
+    padding:13px 25px;
+    border-radius:8px;
+    font-weight:700;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+    margin:5px;
 }
 
-.btn.secondary{
-background:transparent;
-border:1px solid #00d084;
-color:#00e58a
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(0,229,255,.2);
+}
+
+.btn-outline{
+    background:transparent;
+    color:#00e5ff;
+    border:1px solid #00e5ff;
+}
+
+/* GENERAL */
+section{
+    padding:80px 0;
 }
 
 .section-title{
-text-align:center;
-margin-bottom:40px
+    text-align:center;
+    margin-bottom:45px;
 }
 
 .section-title h2{
-font-size:34px;
-margin-bottom:10px
+    font-size:35px;
+    margin-bottom:10px;
 }
 
 .section-title p{
-color:#98a5b1
+    color:#9da8b2;
 }
 
+/* CARDS */
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .card{
-background:#111820;
-border:1px solid #25313c;
-border-radius:14px;
-padding:28px;
-transition:.3s
+    background:#0d141c;
+    border:1px solid #1d2b37;
+    border-radius:14px;
+    padding:28px;
+    transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-4px);
-border-color:#00d084
+    transform:translateY(-5px);
+    border-color:#00e5ff;
 }
 
-.icon{
-font-size:35px;
-margin-bottom:15px
+.card-icon{
+    font-size:38px;
+    margin-bottom:15px;
 }
 
 .card h3{
-color:#00e58a;
-margin-bottom:10px
+    margin-bottom:10px;
 }
 
 .card p{
-color:#aeb9c3
+    color:#aeb8c0;
+    font-size:15px;
 }
 
-.strategy-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px
-}
-
-.strategy{
-background:#10171f;
-border-radius:15px;
-padding:30px;
-border:1px solid #25313c
-}
-
-.strategy.buy{
-border-color:#00d084
-}
-
-.strategy.sell{
-border-color:#ff5c5c
-}
-
-.strategy h3{
-font-size:25px;
-margin-bottom:15px
-}
-
-.buy h3{
-color:#00e58a
-}
-
-.sell h3{
-color:#ff6b6b
-}
-
-.strategy ul{
-padding-left:20px;
-color:#b9c3cc
-}
-
-.strategy li{
-margin:8px 0
-}
-
-.investment{
-background:linear-gradient(135deg,#101b25,#0b1117);
-border:1px solid #2c3a46;
-border-radius:20px;
-padding:35px
-}
-
-.calculator{
-max-width:600px;
-margin:auto
-}
-
-label{
-display:block;
-margin:15px 0 7px;
-color:#c5ced6
-}
-
-input,select{
-width:100%;
-padding:14px;
-background:#080d12;
-color:white;
-border:1px solid #34414d;
-border-radius:8px;
-font-size:16px
-}
-
-.results{
-margin-top:25px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px
-}
-
-.result-box{
-background:#111a22;
-border:1px solid #2a3742;
-padding:20px;
-border-radius:12px;
-text-align:center
-}
-
-.result-box span{
-display:block;
-color:#98a5b1;
-font-size:13px;
-margin-bottom:5px
-}
-
-.result-box strong{
-color:#00e58a;
-font-size:24px
-}
-
-.warning{
-margin-top:20px;
-padding:15px;
-border-left:4px solid #f0b429;
-background:#19170f;
-color:#c8c0a6;
-font-size:13px
-}
-
+/* ABOUT */
 .about{
-max-width:800px;
-margin:auto;
-text-align:center;
-color:#b9c3cc;
-font-size:17px
+    background:#090f15;
 }
 
-.contact{
-text-align:center
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
 }
 
-.contact-number{
-font-size:26px;
-color:#00e58a;
-margin:20px 0
+.about-box{
+    background:#0d141c;
+    border:1px solid #1c2934;
+    padding:30px;
+    border-radius:15px;
 }
 
-.pricing-card{
-text-align:center;
-position:relative
+.about-box h3{
+    color:#00e5ff;
+    margin-bottom:15px;
 }
 
-.pricing-card h2{
-color:#00e58a;
-font-size:32px;
-margin:15px 0
+.about-box p{
+    color:#b8c2ca;
 }
 
-.pricing-card h2 small{
-color:#98a5b1;
-font-size:14px;
-font-weight:normal
+/* MARKETS */
+.market-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.pricing-card p{
-margin:7px 0
+.market-card{
+    padding:30px;
+    border-radius:15px;
+    background:#0d141c;
+    border:1px solid #1d2b37;
+    text-align:center;
 }
 
-.popular-plan{
-border:2px solid #00e58a;
-box-shadow:0 0 25px rgba(0,229,138,.12)
+.market-card h3{
+    margin:12px 0;
 }
 
-.popular-badge{
-display:inline-block;
-background:#00e58a;
-color:#03120b;
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:10px
+.market-card p{
+    color:#aab5bd;
+    margin-bottom:20px;
 }
 
-.vip-plan{
-border-color:#9b6cff
+.market-btn{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:7px;
+    background:#00e5ff;
+    color:#001015;
+    font-weight:bold;
 }
 
-.vip-plan h3{
-color:#c09aff
+/* COURSE */
+.price{
+    font-size:28px;
+    font-weight:800;
+    color:#00e5ff;
+    margin:15px 0;
 }
 
-.payment-wrap{
-background:linear-gradient(135deg,#0d171f,#0a1016);
-border:1px solid #263641;
-border-radius:20px;
-padding:30px
+.course-list{
+    list-style:none;
+    margin:20px 0;
 }
 
-.payment-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
+.course-list li{
+    margin:9px 0;
+    color:#c0c9d0;
 }
 
-.payment-card{
-background:#111a22;
-border:1px solid #30404b;
-border-radius:16px;
-padding:24px;
-text-align:center
+/* SUCCESS */
+.success{
+    background:#090f15;
 }
 
-.payment-card.bkash{
-border-color:#1cdb89
+.success-card{
+    background:#0d141c;
+    border:1px solid #1d2b37;
+    border-radius:14px;
+    padding:25px;
 }
 
-.payment-card.nagad{
-border-color:#ff8b3d
+.success-card h3{
+    color:#00e5ff;
 }
 
-.payment-card.bank{
-border-color:#7fa7ff
+.success-card p{
+    color:#b9c2ca;
+    margin-top:8px;
 }
 
-.payment-card h3{
-font-size:22px;
-margin-bottom:10px
+/* CONDITIONS */
+.conditions{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
-.bkash h3{
-color:#1cdb89
+.condition{
+    background:#0d141c;
+    border-left:4px solid #00e5ff;
+    padding:22px;
+    border-radius:8px;
 }
 
-.nagad h3{
-color:#ff9b55
+.condition h3{
+    margin-bottom:8px;
 }
 
-.bank h3{
-color:#8eb2ff
+.condition p{
+    color:#aeb8c0;
+}
+
+/* PAYMENT */
+.payment-wrapper{
+    max-width:850px;
+    margin:auto;
+}
+
+.payment-box{
+    background:#0d141c;
+    border:1px solid #263541;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:20px;
+}
+
+.payment-method{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    background:#111b24;
+    border-radius:8px;
+    margin:10px 0;
 }
 
 .payment-number{
-font-size:22px;
-font-weight:bold;
-margin:15px 0;
-color:#fff;
-word-break:break-word
+    color:#00e5ff;
+    font-weight:bold;
+    word-break:break-all;
 }
 
 .copy-btn{
-padding:9px 14px;
-border-radius:7px;
-border:1px solid #00d084;
-background:transparent;
-color:#00e58a;
-cursor:pointer
+    background:#00e5ff;
+    border:0;
+    padding:8px 13px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.bank-info{
-text-align:left;
-color:#c7d0d8;
-font-size:14px
+/* FORM */
+.form{
+    max-width:850px;
+    margin:auto;
+    background:#0d141c;
+    border:1px solid #263541;
+    padding:30px;
+    border-radius:15px;
 }
 
-.bank-info div{
-margin:5px 0
+.form-group{
+    margin-bottom:18px;
 }
 
-.bank-info strong{
-color:#fff
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:bold;
 }
 
-.enroll{
-margin-top:25px;
-background:#0b1218;
-border:1px solid #293944;
-border-radius:16px;
-padding:25px
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    background:#080d13;
+    border:1px solid #2a3946;
+    color:#fff;
+    border-radius:7px;
+    outline:none;
 }
 
-.enroll h3{
-color:#00e58a;
-font-size:24px;
-margin-bottom:15px
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#00e5ff;
 }
 
-.form-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px
-}
-
-.full{
-grid-column:1/-1
+textarea{
+    min-height:120px;
+    resize:vertical;
 }
 
 .form-message{
-margin-top:15px;
-padding:12px;
-border-radius:8px;
-display:none;
-background:#10261c;
-color:#7dffc0;
-border:1px solid #1c8e60
+    margin-top:15px;
+    color:#00e5ff;
+    font-weight:bold;
 }
 
-.info-list{
-padding-left:20px;
-color:#b9c3cc
+/* CONTACT */
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    background:#0d141c;
+    padding:35px;
+    border-radius:15px;
+    border:1px solid #1d2b37;
 }
 
-.info-list li{
-margin:8px 0
+.contact-box p{
+    color:#adb8c1;
+    margin:10px 0;
 }
 
-.policy{
-background:#0d1319;
-border:1px solid #25313c;
-border-radius:14px;
-padding:25px;
-margin-top:15px;
-color:#aeb9c3
+.social{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
 }
 
-.policy h3{
-color:#00e58a;
-margin-bottom:8px
+.social a{
+    border:1px solid #2a3946;
+    padding:10px 18px;
+    border-radius:7px;
+    color:#00e5ff;
 }
 
-.opportunity-box{
-background:linear-gradient(135deg,#101b25,#0b1117);
-border:1px solid #2c3a46;
-border-radius:20px;
-padding:30px;
-margin-top:20px
-}
-
-.opportunity-box h3{
-color:#00e58a;
-font-size:24px;
-margin-bottom:12px
-}
-
-.opportunity-box p{
-color:#b9c3cc;
-margin-bottom:12px
-}
-
-.opportunity-box ul{
-padding-left:22px;
-color:#b9c3cc
-}
-
-.opportunity-box li{
-margin:8px 0
-}
-
+/* DISCLAIMER */
 .disclaimer{
-background:#0d1319;
-border-top:1px solid #25313c;
-padding:30px 20px;
-text-align:center;
-color:#7f8c98;
-font-size:12px
+    background:#05080c;
+    border-top:1px solid #17232d;
 }
 
+.disclaimer p{
+    color:#87939c;
+    font-size:13px;
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+/* FOOTER */
 footer{
-background:#05080b;
-text-align:center;
-padding:25px;
-color:#66727d;
-font-size:13px
-}
-
-
-/* SEE MORE */
-
-.extra-course{
-display:none
-}
-
-.see-more-wrap{
-text-align:center;
-margin-top:30px
-}
-
-.see-more-wrap .btn{
-min-width:140px
-}
-
-
-/* STUDENT SECTION */
-
-.student-card{
-text-align:center
-}
-
-.student-card .student-number{
-display:inline-block;
-font-size:12px;
-color:#7f8c98;
-margin-bottom:8px
-}
-
-.student-card h3{
-font-size:18px
-}
-
-.student-card p{
-display:inline-block;
-margin-top:8px;
-padding:5px 12px;
-border-radius:20px;
-background:#10261c;
-color:#00e58a;
-font-size:12px
-}
-
-
-/* STOCK MARKET */
-
-.stock-section{
-background:linear-gradient(135deg,#09150f,#070b10)
-}
-
-.stock-card{
-position:relative;
-overflow:hidden
-}
-
-.stock-card .stock-icon{
-font-size:40px;
-margin-bottom:15px
-}
-
-.stock-btn{
-margin-top:8px
-}
-
-.stock-disclaimer{
-margin-top:25px;
-padding:18px;
-border-left:4px solid #f0b429;
-background:#19170f;
-border-radius:8px;
-color:#c8c0a6;
-font-size:13px
-}
-
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-.payment-grid{
-grid-template-columns:1fr
-}
-
-.strategy-grid{
-grid-template-columns:1fr
-}
-
-.form-grid{
-grid-template-columns:1fr
-}
-
-.full{
-grid-column:auto
-}
-
-}
-
-@media(max-width:700px){
-
-nav{
-display:none
-}
-
-.results{
-grid-template-columns:1fr
-}
-
-.hero{
-min-height:540px
-}
-
-.section-title h2{
-font-size:28px
-}
-
-.card{
-padding:22px
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-
-<!-- HEADER -->
-
-<header>
-
-<div class="logo">
-AS Trademaster Academy
-</div>
-
-<nav>
-
-<a href="#home">Home</a>
-<a href="#courses">Courses</a>
-<a href="#pricing">Pricing</a>
-<a href="#payment">Payment</a>
-<a href="#strategy">Strategy</a>
-<a href="#opportunities">Opportunities</a>
-<a href="#students">Students</a>
-<a href="#bangladesh-stock">Bangladesh Stock</a>
-<a href="#investment">Calculator</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div class="badge">
-TRADING EDUCATION & MARKET KNOWLEDGE
-</div>
-
-<h1>
-Master The Market With
-<span>AS Trademaster Academy</span>
-</h1>
-
-<p>
-Learn trading concepts, market structure, technical analysis,
-Buy & Sell confirmation, entry planning and risk management.
-</p>
-
-<div class="buttons">
-
-<a href="#courses" class="btn">
-Explore Academy
-</a>
-
-<a href="#payment" class="btn secondary">
-Enroll Now
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- COURSES -->
-
-<section id="courses">
-
-<div class="section-title">
-
-<h2>Our Courses</h2>
-
-<p>
-Explore Bangladesh Stock Market, Forex, Gold and trading education.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<!-- 01 BANGLADESH STOCK -->
-
-<div class="card">
-
-<div class="icon">🇧🇩</div>
-
-<h3>
-Bangladesh Stock Market
-</h3>
-
-<p>
-Learn about DSE, CSE, listed companies, market structure,
-stock market basics and responsible investing.
-</p>
-
-<br>
-
-<a
-href="#bangladesh-stock"
-class="btn">
-
-Learn More
-
-</a>
-
-</div>
-
-
-<!-- 02 ONLINE -->
-
-<div class="card">
-
-<div class="icon">💻</div>
-
-<h3>
-Online Course
-</h3>
-
-<p>
-Learn through structured video lessons from beginner
-to advanced trading concepts.
-</p>
-
-<br>
-
-<a href="#payment" class="btn">
-Enroll Online
-</a>
-
-</div>
-
-
-<!-- 03 OFFLINE -->
-
-<div class="card">
-
-<div class="icon">🏫</div>
-
-<h3>
-Offline Course
-</h3>
-
-<p>
-Attend academy classes in person with scheduled lessons
-and direct guidance.
-</p>
-
-<br>
-
-<a href="#payment" class="btn">
-Enroll Offline
-</a>
-
-</div>
-
-
-<!-- 04 FOREX -->
-
-<div class="card">
-
-<div class="icon">📈</div>
-
-<h3>
-Forex Trading
-</h3>
-
-<p>
-Currency pairs, market structure, trends, technical analysis
-and essential Forex concepts.
-</p>
-
-<br>
-
-<a
-href="https://www.tradingview.com/markets/currencies/"
-target="_blank"
-rel="noopener"
-class="btn stock-btn">
-
-📊 Visit TradingView
-
-</a>
-
-</div>
-
-
-<!-- 05 GOLD -->
-
-<div class="card">
-
-<div class="icon">🥇</div>
-
-<h3>
-Gold / XAUUSD
-</h3>
-
-<p>
-Study Gold price movement, important levels,
-market structure and confirmation-based analysis.
-</p>
-
-<br>
-
-<a
-href="https://www.tradingview.com/symbols/XAUUSD/"
-target="_blank"
-rel="noopener"
-class="btn stock-btn">
-
-📊 View XAUUSD Chart
-
-</a>
-
-</div>
-
-
-<!-- 06 TECHNICAL -->
-
-<div class="card">
-
-<div class="icon">📊</div>
-
-<h3>
-Technical Analysis
-</h3>
-
-<p>
-Support, resistance, trend, price action and chart analysis.
-</p>
-
-<br>
-
-<a
-href="https://www.tradingview.com/chart/"
-target="_blank"
-rel="noopener"
-class="btn stock-btn">
-
-📊 Open TradingView
-
-</a>
-
-</div>
-
-
-<!-- 07 RISK -->
-
-<div class="card">
-
-<div class="icon">🛡️</div>
-
-<h3>
-Risk Management
-</h3>
-
-<p>
-Stop Loss, position sizing and responsible risk management.
-</p>
-
-</div>
-
-
-<!-- 08 FUNDAMENTAL -->
-
-<div class="card">
-
-<div class="icon">📉</div>
-
-<h3>
-Fundamental Analysis
-</h3>
-
-<p>
-Understand economic factors, company information
-and market fundamentals.
-</p>
-
-</div>
-
-
-<!-- 09 PSYCHOLOGY -->
-
-<div class="card">
-
-<div class="icon">🧠</div>
-
-<h3>
-Trading Psychology
-</h3>
-
-<p>
-Learn discipline, patience and emotional control in trading.
-</p>
-
-</div>
-
-
-<!-- 10 SKILL -->
-
-<div class="card">
-
-<div class="icon">💼</div>
-
-<h3>
-Skill & Experience
-</h3>
-
-<p>
-Develop practical skills, experience and responsible
-trading habits.
-</p>
-
-</div>
-
-
-<!-- SEE MORE ITEMS -->
-
-
-<div class="card extra-course">
-
-<div class="icon">🎯</div>
-
-<h3>
-Advanced Trading Strategy
-</h3>
-
-<p>
-Advanced concepts for structured market analysis
-and trade planning.
-</p>
-
-</div>
-
-
-<div class="card extra-course">
-
-<div class="icon">📋</div>
-
-<h3>
-Portfolio Management
-</h3>
-
-<p>
-Learn portfolio planning, diversification and
-risk awareness.
-</p>
-
-</div>
-
-
-<div class="card extra-course">
-
-<div class="icon">🔎</div>
-
-<h3>
-Market Analysis
-</h3>
-
-<p>
-Study market structure, key levels and confirmation.
-</p>
-
-</div>
-
-
-<div class="card extra-course">
-
-<div class="icon">💼</div>
-
-<h3>
-Job & Funding Opportunities
-</h3>
-
-<p>
-Opportunities are subject to eligibility, skills,
-experience, performance and applicable conditions.
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="see-more-wrap">
-
-<button
-id="courseSeeMoreBtn"
-class="btn"
-onclick="toggleCourses()">
-
-See More
-
-</button>
-
-</div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section id="pricing">
-
-<div class="section-title">
-
-<h2>Choose Your Plan</h2>
-
-<p>
-Monthly academy plans for different learning levels.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card pricing-card">
-
-<h3>Basic</h3>
-
-<h2>
-$49
-<small>/ Month</small>
-</h2>
-
-<p>✓ Trading Fundamentals</p>
-<p>✓ Basic Market Analysis</p>
-<p>✓ Entry Concepts</p>
-<p>✓ Educational Content</p>
-
-<a href="#payment" class="btn">
-Get Started
-</a>
-
-</div>
-
-
-<div class="card pricing-card">
-
-<h3>Standard</h3>
-
-<h2>
-$99
-<small>/ Month</small>
-</h2>
-
-<p>✓ Everything in Basic</p>
-<p>✓ Advanced Market Analysis</p>
-<p>✓ Buy & Sell Confirmation</p>
-<p>✓ Trading Strategy Lessons</p>
-
-<a href="#payment" class="btn">
-Get Started
-</a>
-
-</div>
-
-
-<div class="card pricing-card popular-plan">
-
-<div class="popular-badge">
-⭐ POPULAR
-</div>
-
-<h3>Premium</h3>
-
-<h2>
-$149
-<small>/ Month</small>
-</h2>
-
-<p>✓ Everything in Standard</p>
-<p>✓ Advanced Trading Strategy</p>
-<p>✓ Premium Video Lessons</p>
-<p>✓ Premium Support</p>
-
-<a href="#payment" class="btn">
-Get Started
-</a>
-
-</div>
-
-
-<div class="card pricing-card vip-plan">
-
-<h3>VIP</h3>
-
-<h2>
-$199
-<small>/ Month</small>
-</h2>
-
-<p>✓ Everything in Premium</p>
-<p>✓ VIP Trading Content</p>
-<p>✓ Advanced Market Insights</p>
-<p>✓ VIP Support</p>
-
-<a href="#payment" class="btn">
-Join VIP
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- PAYMENT -->
-
-<section id="payment">
-
-<div class="section-title">
-
-<h2>
-💳 Payment & Enrollment
-</h2>
-
-<p>
-Choose your course, make payment, then submit your enrollment details.
-</p>
-
-</div>
-
-
-<div class="payment-wrap">
-
-
-<div class="payment-grid">
-
-
-<div class="payment-card bkash">
-
-<h3>🟢 bKash</h3>
-
-<p>
-Payment Number
-</p>
-
-<div class="payment-number">
-01341228602
-</div>
-
-<button
-class="copy-btn"
-onclick="copyText('01341228602','bKash number copied')">
-
-Copy Number
-
-</button>
-
-</div>
-
-
-<div class="payment-card nagad">
-
-<h3>🟠 Nagad</h3>
-
-<p>
-Payment Number
-</p>
-
-<div class="payment-number">
-01341228602
-</div>
-
-<button
-class="copy-btn"
-onclick="copyText('01341228602','Nagad number copied')">
-
-Copy Number
-
-</button>
-
-</div>
-
-
-<div class="payment-card bank">
-
-<h3>🏦 Bank Transfer</h3>
-
-<div class="bank-info">
-
-<div>
-Bank:
-<strong>Shimanto Bank PLC.</strong>
-</div>
-
-<div>
-Account Name:
-<strong>MD ASRAFUL</strong>
-</div>
-
-<div>
-Account:
-<strong>3001101012907</strong>
-</div>
-
-<div>
-Branch:
-<strong>SYLHET BRANCH</strong>
-</div>
-
-<div>
-Routing:
-<strong>305913555</strong>
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<!-- ENROLLMENT -->
-
-<div class="enroll">
-
-<h3>
-📝 Enrollment Form
-</h3>
-
-
-<form onsubmit="submitEnrollment(event)">
-
-
-<div class="form-grid">
-
-
-<div>
-
-<label>
-Full Name
-</label>
-
-<input
-id="name"
-required
-placeholder="Your full name">
-
-</div>
-
-
-<div>
-
-<label>
-Mobile Number
-</label>
-
-<input
-id="mobile"
-required
-type="tel"
-placeholder="01XXXXXXXXX">
-
-</div>
-
-
-<div>
-
-<label>
-Course Type
-</label>
-
-<select id="course" required>
-
-<option value="">
-Select course type
-</option>
-
-<option>
-Online Course
-</option>
-
-<option>
-Offline Course
-</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Plan
-</label>
-
-<select id="plan" required>
-
-<option value="">
-Select plan
-</option>
-
-<option>
-Basic - $49/month
-</option>
-
-<option>
-Standard - $99/month
-</option>
-
-<option>
-Premium - $149/month
-</option>
-
-<option>
-VIP - $199/month
-</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Payment Method
-</label>
-
-<select id="method" required>
-
-<option value="">
-Select payment method
-</option>
-
-<option>
-bKash
-</option>
-
-<option>
-Nagad
-</option>
-
-<option>
-Bank Transfer
-</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Transaction ID
-</label>
-
-<input
-id="trx"
-required
-placeholder="Enter transaction ID">
-
-</div>
-
-
-<div class="full">
-
-<label>
-Payment Screenshot (optional)
-</label>
-
-<input
-id="proof"
-type="file"
-accept="image/*">
-
-</div>
-
-
-<div class="full">
-
-<label>
-Message
-</label>
-
-<input
-id="message"
-placeholder="Any additional information">
-
-</div>
-
-
-</div>
-
-
-<button
-class="btn"
-type="submit">
-
-Submit Enrollment
-
-</button>
-
-
-<div
-id="formMessage"
-class="form-message">
-</div>
-
-
-</form>
-
-
-<p style="margin-top:12px;color:#8997a3;font-size:12px">
-
-Important: This form does not automatically process or verify payments.
-After submission, WhatsApp will open so you can contact the academy
-to confirm your payment and receive course access.
-
-</p>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STRATEGY -->
-
-<section id="strategy">
-
-<div class="section-title">
-
-<h2>
-Buy & Sell Confirmation
-</h2>
-
-<p>
-Wait for confirmation instead of entering blindly.
-</p>
-
-</div>
-
-
-<div class="strategy-grid">
-
-
-<div class="strategy buy">
-
-<h3>
-🟢 BUY Confirmation
-</h3>
-
-<ul>
-
-<li>
-Identify an important market level.
-</li>
-
-<li>
-Wait for price reaction.
-</li>
-
-<li>
-Look for bullish confirmation.
-</li>
-
-<li>
-Confirm market structure.
-</li>
-
-<li>
-Plan Stop Loss and Take Profit.
-</li>
-
-<li>
-Enter only when the setup matches the strategy.
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="strategy sell">
-
-<h3>
-🔴 SELL Confirmation
-</h3>
-
-<ul>
-
-<li>
-Identify an important resistance or supply area.
-</li>
-
-<li>
-Wait for price reaction.
-</li>
-
-<li>
-Look for bearish confirmation.
-</li>
-
-<li>
-Confirm market structure.
-</li>
-
-<li>
-Plan Stop Loss and Take Profit.
-</li>
-
-<li>
-Enter only when the setup matches the strategy.
-</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- MARKET ANALYSIS -->
-
-<section>
-
-<div class="section-title">
-
-<h2>
-Market Analysis
-</h2>
-
-<p>
-Focus on structure, confirmation and discipline.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="icon">
-🔎
-</div>
-
-<h3>
-Market Structure
-</h3>
-
-<p>
-Study higher highs, lower lows, trends and important price zones.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-📍
-</div>
-
-<h3>
-Key Levels
-</h3>
-
-<p>
-Identify areas where price may react before planning a possible setup.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-⏳
-</div>
-
-<h3>
-Confirmation
-</h3>
-
-<p>
-Wait for confirmation instead of chasing the market.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- OPPORTUNITIES -->
-
-<section id="opportunities">
-
-<div class="section-title">
-
-<h2>
-🎯 Skill, Experience & Opportunities
-</h2>
-
-<p>
-For skilled and experienced traders.
-</p>
-
-</div>
-
-
-<div class="opportunity-box">
-
-<h3>
-📈 Skill & Experience
-</h3>
-
-<p>
-Special opportunities for skilled and experienced traders.
-Trading knowledge, skills, experience and responsible performance
-will be considered.
-</p>
-
-<ul>
-
-<li>
-Strong trading knowledge and skills.
-</li>
-
-<li>
-Practical market experience.
-</li>
-
-<li>
-Proper risk management and trading discipline.
-</li>
-
-<li>
-Ability to demonstrate trading performance.
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="opportunity-box">
-
-<h3>
-💼 Job & Funding
-</h3>
-
-<p>
-Job and funding opportunities are subject to eligibility,
-trading skills, experience, performance, risk management,
-and the academy’s applicable terms and conditions.
-</p>
-
-<ul>
-
-<li>
-Trading skills and experience are required.
-</li>
-
-<li>
-Performance and risk management may be evaluated.
-</li>
-
-<li>
-Candidates must follow the required rules and conditions.
-</li>
-
-<li>
-Opportunities are subject to eligibility and verification.
-</li>
-
-<li>
-Job or funding is not guaranteed.
-</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-<!-- STUDENTS -->
-
-<section id="students">
-
-<div class="section-title">
-
-<h2>
-👥 Our Students & Participants
-</h2>
-
-<p>
-Students and participants connected with AS Trademaster Academy.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card student-card">
-<span class="student-number">01</span>
-<h3>Jahangir Hossain</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">02</span>
-<h3>Muzzakir Ahmed</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">03</span>
-<h3>Md. Al Amin</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">04</span>
-<h3>Musarof Islam</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">05</span>
-<h3>Tainya Islam</h3>
-<p>Job & Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">06</span>
-<h3>Kaykubad</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">07</span>
-<h3>Saminur Islam</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">08</span>
-<h3>Parvez Ahmed</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">09</span>
-<h3>Sonjoy Roy</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">10</span>
-<h3>Oshim</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">11</span>
-<h3>Md. Rafiq Hasan</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">12</span>
-<h3>Shakil Ahmed</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">13</span>
-<h3>Arman Hossain</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">14</span>
-<h3>Rashedul Islam</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">15</span>
-<h3>Mim Akter</h3>
-<p>Job & Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">16</span>
-<h3>Imran Hossain</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">17</span>
-<h3>Nayeem Ahmed</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">18</span>
-<h3>Fahad Karim</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">19</span>
-<h3>Tasmia Rahman</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">20</span>
-<h3>Mahmudul Hasan</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">21</span>
-<h3>Md. Saiful Islam</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">22</span>
-<h3>Arafat Hossain</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">23</span>
-<h3>Rakibul Hasan</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">24</span>
-<h3>Tanvir Ahmed</h3>
-<p>Job & Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">25</span>
-<h3>Mehedi Hasan</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">26</span>
-<h3>Rony Ahmed</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">27</span>
-<h3>Jannatul Ferdous</h3>
-<p>Job</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">28</span>
-<h3>Faisal Ahmed</h3>
-<p>Course</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">29</span>
-<h3>Sumaiya Akter</h3>
-<p>Investment</p>
-</div>
-
-<div class="card student-card">
-<span class="student-number">30</span>
-<h3>Fahim Rahman</h3>
-<p>Job & Investment</p>
-</div>
-
-
-</div>
-
-
-<div class="stock-disclaimer" style="margin-top:25px">
-
-<strong>Important:</strong>
-Student and participant information should only be displayed
-with the relevant person's permission.
-
-</div>
-
-</section>
-
-
-<!-- BANGLADESH STOCK MARKET -->
-
-<section id="bangladesh-stock" class="stock-section">
-
-<div class="section-title">
-
-<h2>
-🇧🇩 Bangladesh Stock Market
-</h2>
-
-<p>
-Learn about Bangladesh's capital market and stock exchanges.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card stock-card">
-
-<div class="stock-icon">
-📊
-</div>
-
-<h3>
-Dhaka Stock Exchange
-</h3>
-
-<p>
-Learn about DSE, listed companies, market structure
-and Bangladesh's capital market.
-</p>
-
-<br>
-
-<a
-href="https://www.dsebd.org/"
-target="_blank"
-rel="noopener"
-class="btn stock-btn">
-
-Visit DSE
-
-</a>
-
-</div>
-
-
-<div class="card stock-card">
-
-<div class="stock-icon">
-📈
-</div>
-
-<h3>
-Chittagong Stock Exchange
-</h3>
-
-<p>
-Learn about CSE, listed securities and capital market
-activities in Bangladesh.
-</p>
-
-<br>
-
-<a
-href="https://www.cse.com.bd/"
-target="_blank"
-rel="noopener"
-class="btn stock-btn">
-
-Visit CSE
-
-</a>
-
-</div>
-
-
-<div class="card stock-card">
-
-<div class="stock-icon">
-🎓
-</div>
-
-<h3>
-Stock Market Learning
-</h3>
-
-<p>
-Learn stock market basics, market analysis,
-risk management and responsible investing.
-</p>
-
-<br>
-
-<a
-href="#courses"
-class="btn stock-btn">
-
-Start Learning
-
-</a>
-
-</div>
-
-
-</div>
-
-
-<div class="stock-disclaimer">
-
-<strong>⚠️ Stock Market Risk Disclosure</strong>
-
-<br><br>
-
-Investment in the stock market involves risk.
-Past performance does not guarantee future results.
-Always understand the market, applicable rules and
-your own risk before making an investment decision.
-
-</div>
-
-</section>
-
-
-<!-- INVESTMENT CALCULATOR -->
-
-<section id="investment">
-
-<div class="section-title">
-
-<h2>
-Investment Return Calculator
-</h2>
-
-<p>
-Illustrative calculation only — not a promise or guarantee of return.
-</p>
-
-</div>
-
-
-<div class="investment">
-
-<div class="calculator">
-
-
-<label>
-Investment Amount (USD)
-</label>
-
-<select
-id="amount"
-onchange="calculateReturn()">
-
-<option value="1000">
-$1,000
-</option>
-
-<option value="5000">
-$5,000
-</option>
-
-<option value="10000">
-$10,000
-</option>
-
-<option value="25000">
-$25,000
-</option>
-
-<option value="50000">
-$50,000
-</option>
-
-<option value="75000">
-$75,000
-</option>
-
-<option value="100000">
-$100,000
-</option>
-
-</select>
-
-
-<label>
-Illustrative Return Type
-</label>
-
-<select
-id="period"
-onchange="calculateReturn()">
-
-<option value="monthly">
-Monthly — 3%
-</option>
-
-<option value="yearly">
-Yearly — 40%
-</option>
-
-</select>
-
-
-<div class="results">
-
-
-<div class="result-box">
-
-<span>
-Investment
-</span>
-
-<strong id="investmentAmount">
-$1,000.00
-</strong>
-
-</div>
-
-
-<div class="result-box">
-
-<span>
-Illustrative Return
-</span>
-
-<strong id="profitAmount">
-$30.00
-</strong>
-
-</div>
-
-
-</div>
-
-
-<div
-class="result-box"
-style="margin-top:15px">
-
-<span>
-Illustrative Total
-</span>
-
-<strong id="totalAmount">
-$1,030.00
-</strong>
-
-</div>
-
-
-<div class="warning">
-
-<strong>
-Important:
-</strong>
-
-<br>
-
-This calculator is for illustration only.
-The displayed percentages are not guaranteed returns
-and actual investment results may be different.
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WHY US -->
-
-<section>
-
-<div class="section-title">
-
-<h2>
-Why AS Trademaster Academy?
-</h2>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="icon">
-🎯
-</div>
-
-<h3>
-Confirmation First
-</h3>
-
-<p>
-Focus on waiting for a structured setup before considering an entry.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-🧠
-</div>
-
-<h3>
-Trading Knowledge
-</h3>
-
-<p>
-Learn concepts behind market movements instead of simply following signals.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-🛡️
-</div>
-
-<h3>
-Risk Awareness
-</h3>
-
-<p>
-Understand that protecting capital and controlling risk are essential.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="section-title">
-
-<h2>
-About AS Trademaster Academy
-</h2>
-
-</div>
-
-
-<p class="about">
-
-AS Trademaster Academy is focused on practical trading education,
-market analysis and disciplined decision-making.
-Our goal is to help learners understand financial markets
-and develop their own trading knowledge.
-
-</p>
-
-</section>
-
-
-<!-- POLICIES -->
-
-<section id="policies">
-
-<div class="section-title">
-
-<h2>
-Academy Information
-</h2>
-
-<p>
-Important information for students.
-</p>
-
-</div>
-
-
-<div class="policy">
-
-<h3>
-❓ FAQ
-</h3>
-
-<p>
-
-<strong>
-How do I enroll?
-</strong>
-
-Choose Online or Offline, select a plan, make payment
-and submit the enrollment form.
-
-</p>
-
-
-<p>
-
-<strong>
-When do I get access?
-</strong>
-
-After payment verification, the academy can provide
-the relevant course access or offline confirmation.
-
-</p>
-
-
-<p>
-
-<strong>
-Is profit guaranteed?
-</strong>
-
-No. Trading involves risk and no profit is guaranteed.
-
-</p>
-
-</div>
-
-
-<div class="policy">
-
-<h3>
-📜 Terms & Conditions
-</h3>
-
-<p>
-
-Course materials are for educational purposes.
-Students should follow the academy's enrollment,
-payment and access rules.
-Course access may not be shared or redistributed without permission.
-
-</p>
-
-</div>
-
-
-<div class="policy">
-
-<h3>
-🔐 Privacy Policy
-</h3>
-
-<p>
-
-Enrollment information should be used only for course communication,
-payment verification and academy administration.
-Do not submit unnecessary sensitive information.
-
-</p>
-
-</div>
-
-
-<div class="policy">
-
-<h3>
-💰 Refund Policy
-</h3>
-
-<p>
-
-Refund eligibility should depend on the course/package terms
-communicated at enrollment.
-Please contact the academy before purchasing if you have questions
-about refund eligibility.
-
-</p>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="section-title">
-
-<h2>
-Contact Us
-</h2>
-
-<p>
-For academy information and enquiries.
-</p>
-
-</div>
-
-
-<div class="contact">
-
-
-<div class="contact-number">
-
-📞 01341228602
-
-</div>
-
-
-<a
-class="btn"
-href="https://wa.me/8801341228602"
-target="_blank"
-rel="noopener">
-
-💬 WhatsApp
-
-</a>
-
-
-<a
-class="btn secondary"
-href="mailto:astrademasteracademybd22@gmail.com">
-
-📧 Gmail
-
-</a>
-
-
-<a
-class="btn"
-href="tel:01341228602">
-
-📞 Call Now
-
-</a>
-
-
-<h3>
-📘 Follow AS Trademaster Academy
-</h3>
-
-
-<p
-style="color:#aeb9c3;margin-bottom:12px">
-
-Follow us on Facebook for the latest updates.
-
-</p>
-
-
-<a
-class="btn"
-href="https://www.facebook.com/share/1JS1tYWrCe/"
-target="_blank"
-rel="noopener">
-
-📘 Facebook
-
-</a>
-
-
-</div>
-
-</section>
-
-
-<!-- DISCLAIMER -->
-
-<div class="disclaimer">
-
-<strong>
-Trading Disclaimer:
-</strong>
-
-<br><br>
-
-AS Trademaster Academy provides educational content only.
-Nothing on this website should be considered financial,
-investment or trading advice.
-
-<br><br>
-
-Trading and investing in financial markets involves risk.
-Past performance does not guarantee future results.
-
-<br><br>
-
-Investment opportunities, job opportunities and funding
-are subject to eligibility, verification, applicable terms
-and conditions. No job, funding or investment return is guaranteed.
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 AS Trademaster Academy. All Rights Reserved.
-
-</footer>
-
-
-<script>
-
-
-/* SEE MORE COURSES */
-
-function toggleCourses(){
-
-const extraCourses =
-document.querySelectorAll(".extra-course");
-
-const button =
-document.getElementById("courseSeeMoreBtn");
-
-const isHidden =
-extraCourses[0].style.display === "" ||
-extraCourses[0].style.display === "none";
-
-extraCourses.forEach(function(course){
-
-course.style.display =
-isHidden ? "block" : "none";
-
-});
-
-button.innerText =
-isHidden ? "See Less" : "See More";
-
-}
-
-
-/* COPY PAYMENT NUMBER */
-
-function copyText(text,msg){
-
-navigator.clipboard.writeText(text)
-
-.then(function(){
-
-alert(msg);
-
-})
-
-.catch(function(){
-
-alert(text);
-
-});
-
-}
-
-
-/* INVESTMENT CALCULATOR */
-
-function calculateReturn(){
-
-let amount =
-parseFloat(
-document.getElementById("amount").value
-) || 0;
-
-let period =
-document.getElementById("period").value;
-
-let rate =
-period === "monthly"
-? 0.03
-: 0.40;
-
-let profit =
-amount * rate;
-
-let total =
-amount + profit;
-
-
-document.getElementById(
-"investmentAmount"
-).innerText =
-"$" +
-amount.toLocaleString("en-US",{
-minimumFractionDigits:2,
-maximumFractionDigits:2
-});
-
-
-document.getElementById(
-"profitAmount"
-).innerText =
-"$" +
-profit.toLocaleString("en-US",{
-minimumFractionDigits:2,
-maximumFractionDigits:2
-});
-
-
-document.getElementById(
-"totalAmount"
-).innerText =
-"$" +
-total.toLocaleString("en-US",{
-minimumFractionDigits:2,
-maximumFractionDigits:2
-});
-
-}
-
-
-/* ENROLLMENT -> WHATSAPP */
-
-function submitEnrollment(e){
-
-e.preventDefault();
-
-
-let name =
-document.getElementById("name").value;
-
-let mobile =
-document.getElementById("mobile").value;
-
-let course =
-document.getElementById("course").value;
-
-let plan =
-document.getElementById("plan").value;
-
-let method =
-document.getElementById("method").value;
-
-let trx =
-document.getElementById("trx").value;
-
-let message =
-document.getElementById("message").value;
-
-
-let whatsappNumber =
-"8801341228602";
-
-
-let whatsappMessage =
-
-"Hello AS Trademaster Academy,%0A%0A" +
-
-"I want to submit my enrollment details.%0A%0A" +
-
-"Name: " +
-encodeURIComponent(name) +
-"%0A" +
-
-"Mobile: " +
-encodeURIComponent(mobile) +
-"%0A" +
-
-"Course: " +
-encodeURIComponent(course) +
-"%0A" +
-
-"Plan: " +
-encodeURIComponent(plan) +
-"%0A" +
-
-"Payment Method: " +
-encodeURIComponent(method) +
-"%0A" +
-
-"Transaction ID: " +
-encodeURIComponent(trx) +
-"%0A" +
-
-"Message: " +
-encodeURIComponent(message || "None") +
-
-"%0A%0APlease verify my payment and confirm my enrollment.";
-
-
-let whatsappURL =
-
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-whatsappMessage;
-
-
-let msg =
-document.getElementById("formMessage");
-
-
-msg.style.display =
-"block";
-
-
-msg.innerText =
-"Enrollment details ready. WhatsApp is opening so you can send your information to the academy.";
-
-
-window.open(
-whatsappURL,
-"_blank"
-);
-
-}
-
-
-/* INITIAL CALCULATION */
-
-calculateReturn();
-
-</script>
-
-
-</body>
-</html>
+    background:#030507;
+    text-align:center;
+    padding:25px 10px;
+    color:#7e899
